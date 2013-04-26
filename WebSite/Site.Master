@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebSite.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <script src="/Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <header class="title">
+                <img src="Images/owaspLogo.png" style="float: left; height: 50px;" alt="OWASP" />
+                <h1 style="float: left;">
+                    WebGoat.Net
+                </h1>
+            </header>
+            <div class="loginDisplay">
+                &nbsp;&nbsp;
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
+                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" 
+                            LogoutText="Log Out" LogoutPageUrl="~/" onloggedout="HeadLoginStatus_LoggedOut" 
+                            /> 
+                        &nbsp;] [&nbsp;<a href="~/MyAccount.aspx" runat="server">My account</a>&nbsp;]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            &nbsp;</div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" />
+                        <asp:MenuItem NavigateUrl="~/ViewCart.aspx" Text="My Cart" />
+                        <asp:MenuItem NavigateUrl="~/Search.aspx" Text="Search" />
+                        <asp:MenuItem NavigateUrl="Blog" Text="Blog" />
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About" />
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        <a href="Default.aspx">Home</a> |
+        <a href="Blog.aspx">Blog</a> |
+        <a href="About.aspx">About us</a> |
+        <a href="Search.aspx">Search</a>
+    </div>
+    </form>
+</body>
+</html>

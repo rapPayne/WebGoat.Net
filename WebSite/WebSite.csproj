@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C88699F3-8AD2-44ED-8A66-77FEC0E51FA1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebSite</RootNamespace>
+    <AssemblyName>WebSite</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AntiXSSLibrary">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Information Security\AntiXSS Library v4.0\AntiXSSLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlSanitizationLibrary, Version=4.0.0.0, Culture=neutral, PublicKeyToken=d127efab8a9c114f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Information Security\AntiXSS Library v4.0\HtmlSanitizationLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Recaptcha">
+      <HintPath>..\ThirdPartyTools\Recaptcha.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\ChangeAccountInfo.aspx" />
+    <Content Include="Account\ViewAccountInfo.aspx" />
+    <Content Include="AddUserTemp.aspx" />
+    <Content Include="Admin\AddProduct.aspx" />
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\EditProduct.aspx" />
+    <Content Include="Admin\ManageProducts.aspx" />
+    <Content Include="Checkout\Orders.svc" />
+    <Content Include="FAQ.aspx" />
+    <Content Include="HtmlSanitizationLibrary.dll" />
+    <Content Include="Images\owaspLogo.png" />
+    <Content Include="Images\ProductImages\11.jpg" />
+    <Content Include="Images\ProductImages\12.jpg" />
+    <Content Include="Images\ProductImages\13.jpg" />
+    <Content Include="Images\ProductImages\14.jpg" />
+    <Content Include="Images\ProductImages\15.jpg" />
+    <Content Include="Images\ProductImages\16.jpg" />
+    <Content Include="Images\ProductImages\17.jpg" />
+    <Content Include="Images\ProductImages\18.jpg" />
+    <Content Include="Images\ProductImages\19.jpg" />
+    <Content Include="Images\ProductImages\20.jpg" />
+    <Content Include="Images\ProductImages\21.jpg" />
+    <Content Include="Images\ProductImages\22.jpg" />
+    <Content Include="Images\ProductImages\23.jpg" />
+    <Content Include="Images\ProductImages\24.jpg" />
+    <Content Include="Images\ProductImages\25.jpg" />
+    <Content Include="Images\ProductImages\26.jpg" />
+    <Content Include="Images\ProductImages\27.jpg" />
+    <Content Include="Images\ProductImages\28.jpg" />
+    <Content Include="Images\ProductImages\29.jpg" />
+    <Content Include="Images\ProductImages\30.jpg" />
+    <Content Include="Images\ProductImages\31.jpg" />
+    <Content Include="Images\ProductImages\32.jpg" />
+    <Content Include="Images\ProductImages\33.jpg" />
+    <Content Include="Images\ProductImages\34.jpg" />
+    <Content Include="Images\ProductImages\35.jpg" />
+    <Content Include="Images\ProductImages\36.jpg" />
+    <Content Include="Images\ProductImages\37.jpg" />
+    <Content Include="Images\ProductImages\38.jpg" />
+    <Content Include="Images\ProductImages\39.jpg" />
+    <Content Include="Images\ProductImages\40.jpg" />
+    <Content Include="Images\ProductImages\41.jpg" />
+    <Content Include="Images\ProductImages\42.jpg" />
+    <Content Include="Images\ProductImages\43.jpg" />
+    <Content Include="Images\ProductImages\44.jpg" />
+    <Content Include="Images\ProductImages\45.jpg" />
+    <Content Include="Images\ProductImages\46.jpg" />
+    <Content Include="Images\ProductImages\47.jpg" />
+    <Content Include="Images\ProductImages\48.jpg" />
+    <Content Include="Images\ProductImages\49.jpg" />
+    <Content Include="Images\ProductImages\50.jpg" />
+    <Content Include="Images\ProductImages\51.jpg" />
+    <Content Include="Images\ProductImages\52.jpg" />
+    <Content Include="Images\ProductImages\53.jpg" />
+    <Content Include="Images\ProductImages\54.jpg" />
+    <Content Include="Images\ProductImages\55.jpg" />
+    <Content Include="Images\ProductImages\56.jpg" />
+    <Content Include="Images\ProductImages\57.jpg" />
+    <Content Include="Images\ProductImages\58.jpg" />
+    <Content Include="Images\ProductImages\59.jpg" />
+    <Content Include="Images\ProductImages\60.jpg" />
+    <Content Include="Images\ProductImages\61.jpg" />
+    <Content Include="Images\ProductImages\62.jpg" />
+    <Content Include="Images\ProductImages\63.jpg" />
+    <Content Include="Images\ProductImages\64.jpg" />
+    <Content Include="Images\ProductImages\66.jpg" />
+    <Content Include="Images\ProductImages\71.jpg" />
+    <Content Include="Images\ProductImages\Breadsticks.jpg" />
+    <Content Include="Images\ProductImages\65.jpg" />
+    <Content Include="Images\ProductImages\67.jpg" />
+    <Content Include="Images\ProductImages\68.jpg" />
+    <Content Include="Images\ProductImages\69.jpg" />
+    <Content Include="Images\ProductImages\70.jpg" />
+    <Content Include="Images\ProductImages\72.jpg" />
+    <Content Include="Images\ProductImages\73.jpg" />
+    <Content Include="Images\ProductImages\74.jpg" />
+    <Content Include="Images\ProductImages\75.jpg" />
+    <Content Include="Images\ProductImages\76.jpg" />
+    <Content Include="Images\ProductImages\77.jpg" />
+    <Content Include="Images\ProductImages\78.jpg" />
+    <Content Include="Images\ProductImages\79.jpg" />
+    <Content Include="Images\ProductImages\80.jpg" />
+    <Content Include="MyAccount.aspx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="App_Data\NORTHWND.MDF" />
+    <Content Include="App_Data\NORTHWND_log.ldf">
+      <DependentUpon>NORTHWND.MDF</DependentUpon>
+    </Content>
+    <Content Include="Blog.aspx" />
+    <Content Include="BlogCreate.aspx" />
+    <Content Include="BlogEntryReply.aspx" />
+    <Content Include="Checkout\Checkout.aspx" />
+    <Content Include="Checkout\Receipt.aspx" />
+    <Content Include="Checkout\Receipts.aspx" />
+    <Content Include="Images\ProductImages\1.jpg" />
+    <Content Include="Images\ProductImages\10.jpg" />
+    <Content Include="Images\ProductImages\2.jpg" />
+    <Content Include="Images\ProductImages\3.jpg" />
+    <Content Include="Images\ProductImages\4.jpg" />
+    <Content Include="Images\ProductImages\5.jpg" />
+    <Content Include="Images\ProductImages\6.jpg" />
+    <Content Include="Images\ProductImages\7.jpg" />
+    <Content Include="Images\ProductImages\8.jpg" />
+    <Content Include="Images\ProductImages\9.jpg" />
+    <Content Include="Images\ProductImages\NoImage.jpg" />
+    <Content Include="Product.aspx" />
+    <Content Include="PackageTracking.aspx" />
+    <Content Include="RemoveFromCart.aspx" />
+    <Content Include="Scripts\Blog.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\ViewCart.js" />
+    <Content Include="Search.aspx" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Users.txt" />
+    <Content Include="ViewCart.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangeAccountInfo.aspx.cs">
+      <DependentUpon>ChangeAccountInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangeAccountInfo.aspx.designer.cs">
+      <DependentUpon>ChangeAccountInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ViewAccountInfo.aspx.cs">
+      <DependentUpon>ViewAccountInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ViewAccountInfo.aspx.designer.cs">
+      <DependentUpon>ViewAccountInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddUserTemp.aspx.cs">
+      <DependentUpon>AddUserTemp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddUserTemp.aspx.designer.cs">
+      <DependentUpon>AddUserTemp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddProduct.aspx.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddProduct.aspx.designer.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditProduct.aspx.cs">
+      <DependentUpon>EditProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditProduct.aspx.designer.cs">
+      <DependentUpon>EditProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageProducts.aspx.cs">
+      <DependentUpon>ManageProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageProducts.aspx.designer.cs">
+      <DependentUpon>ManageProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout\Orders.svc.cs">
+      <DependentUpon>Orders.svc</DependentUpon>
+    </Compile>
+    <Compile Include="FAQ.aspx.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAQ.aspx.designer.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyAccount.aspx.cs">
+      <DependentUpon>MyAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyAccount.aspx.designer.cs">
+      <DependentUpon>MyAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blog.aspx.cs">
+      <DependentUpon>Blog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog.aspx.designer.cs">
+      <DependentUpon>Blog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BlogCreate.aspx.cs">
+      <DependentUpon>BlogCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BlogCreate.aspx.designer.cs">
+      <DependentUpon>BlogCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BlogEntryReply.aspx.cs">
+      <DependentUpon>BlogEntryReply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BlogEntryReply.aspx.designer.cs">
+      <DependentUpon>BlogEntryReply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout\Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout\Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout\Receipt.aspx.cs">
+      <DependentUpon>Receipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout\Receipt.aspx.designer.cs">
+      <DependentUpon>Receipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout\Receipts.aspx.cs">
+      <DependentUpon>Receipts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout\Receipts.aspx.designer.cs">
+      <DependentUpon>Receipts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PackageTracking.aspx.cs">
+      <DependentUpon>PackageTracking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PackageTracking.aspx.designer.cs">
+      <DependentUpon>PackageTracking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveFromCart.aspx.cs">
+      <DependentUpon>RemoveFromCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RemoveFromCart.aspx.designer.cs">
+      <DependentUpon>RemoveFromCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCart.aspx.cs">
+      <DependentUpon>ViewCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewCart.aspx.designer.cs">
+      <DependentUpon>ViewCart.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{7A5C72B3-5EF5-4E82-B9EE-4FF07966B5CF}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
+      <Project>{A1A81ED6-89FC-4B69-8522-032FD1757148}</Project>
+      <Name>Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="API\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>777</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

