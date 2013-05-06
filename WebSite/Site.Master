@@ -14,7 +14,7 @@
     <div class="page">
         <div class="header">
             <header class="title">
-                <img src="Images/owaspLogo.png" style="float: left; height: 50px;" alt="OWASP" />
+                <img src="/Images/owaspLogo.png" style="float: left; height: 50px;" alt="OWASP" />
                 <h1 style="float: left;">
                     WebGoat.Net
                 </h1>

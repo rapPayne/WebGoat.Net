@@ -74,7 +74,6 @@
     <Content Include="Admin\ManageProducts.aspx" />
     <Content Include="Checkout\Orders.svc" />
     <Content Include="FAQ.aspx" />
-    <Content Include="HtmlSanitizationLibrary.dll" />
     <Content Include="Images\owaspLogo.png" />
     <Content Include="Images\ProductImages\11.jpg" />
     <Content Include="Images\ProductImages\12.jpg" />
