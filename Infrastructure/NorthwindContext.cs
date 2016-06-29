@@ -5,7 +5,7 @@ namespace Infrastructure
 {
     public class NorthwindContext : DbContext
     {
-        private static string _connString = @"Data Source=.\SQLEXPRESS;AttachDbFilename='|DataDirectory|NORTHWND.MDF';Integrated Security=True;User Instance=True";
+        private static string _connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Northwnd.mdf;Integrated Security=True";
         private NorthwindContext()
             : base(_connString)
         {

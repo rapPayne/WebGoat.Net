@@ -72,7 +72,7 @@ namespace Infrastructure
         }
         public void UpdateOrder(Order Order)
         {
-            _context.Entry(Order).State = System.Data.EntityState.Modified;
+            _context.Entry(Order).State = System.Data.Entity.EntityState.Modified;
             _context.SaveChanges();
         }
     }
