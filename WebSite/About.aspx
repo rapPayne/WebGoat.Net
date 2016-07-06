@@ -34,7 +34,7 @@
         <div>
             The Blog Entry response page allows markup to be added. The markup will appear in
             the Blog.aspx page as a stored XSS attack.&nbsp; This XSS-vulnerable page can by
-            used to lift session cookies by tricking the user into calling http://localhost:666/StealCookie.aspx?Cookie=[Enter
+            used to lift session cookies by tricking the user into calling http://localhost:8888/StealCookie.aspx?Cookie=[Enter
             cookie value here].</div>
     </div>
     <div class="owaspTopTen">
@@ -64,7 +64,7 @@
         <h2>
             A5 - Cross-site request Forgery</h2>
         <div>
-            In the Evil site, there is a page (http://localhost:666/CSRF.html) that mounts a
+            In the Evil site, there is a page (http://localhost:8888/CSRF.html) that mounts a
             CSRF attack.&nbsp; If the user surfs to it while he is logged in on the legitimate
             site, it will load his cart with a particular product and check out using the logged-in
             user&#39;s credentials.&nbsp; To protect against this, add a CAPTCHA to the checkout
@@ -142,7 +142,7 @@
                 top of that link, there is an iframe with its opacity set to zero.&nbsp; The iframe
                 holds another page ... the one that the attacker wants you to click on.&nbsp; To
                 see a clickjacking attack, first log in to this legitimate site.&nbsp; Then visit
-                <a href="http://localhost:666/Clickjacking.html">http://localhost:666/Clickjacking.html</a>.&nbsp;
+                <a href="http://localhost:8888/Clickjacking.html">http://localhost:8888/Clickjacking.html</a>.&nbsp;
                 After you&#39;ve clicked on the video in just the right spot, go back to this site
                 and examine your cart.&nbsp; The clickjacker tricked you into adding product number
                 eight to your cart.</div>

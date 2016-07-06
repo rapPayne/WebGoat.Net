@@ -14,7 +14,7 @@ function updateOrder() {
     });
     $.ajax({
         type: "POST",
-        url: "http://localhost:777/API/OrderService.svc/HelloWorld",
+        url: "http://localhost:7777/API/OrderService.svc/HelloWorld",
         data: cart,
         contentType: "application/json; charset=utf-8",
         dataType: "json",
