@@ -1,4 +1,4 @@
 WebGoat.Net
 ===========
 
-OWASP's official repository for WebGoat (ASP.NET version)
+OWASP's official repository for WebGoat (ASP.NET WebForms version)
