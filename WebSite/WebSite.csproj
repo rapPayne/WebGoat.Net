@@ -26,6 +26,7 @@
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <TargetFrameworkProfile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -294,6 +295,31 @@
     <Compile Include="Admin\ManageProducts.aspx.designer.cs">
       <DependentUpon>ManageProducts.aspx</DependentUpon>
     </Compile>
+    <Compile Include="BusinessLogic\Data\BlogEntryRepository.cs" />
+    <Compile Include="BusinessLogic\Data\BlogResponseRepository.cs" />
+    <Compile Include="BusinessLogic\Data\CartRepository.cs" />
+    <Compile Include="BusinessLogic\Data\CategoryRepository.cs" />
+    <Compile Include="BusinessLogic\Data\CustomerRepository.cs" />
+    <Compile Include="BusinessLogic\EmailSender.cs" />
+    <Compile Include="BusinessLogic\Data\NorthwindContext.cs" />
+    <Compile Include="BusinessLogic\Data\OrderRepository.cs" />
+    <Compile Include="BusinessLogic\Data\ProductRepository.cs" />
+    <Compile Include="BusinessLogic\Data\ShipperRepository.cs" />
+    <Compile Include="BusinessLogic\Data\SupplierRepository.cs" />
+    <Compile Include="BusinessLogic\Interfaces\IProductRepository.cs" />
+    <Compile Include="BusinessLogic\Models\BlogEntry.cs" />
+    <Compile Include="BusinessLogic\Models\BlogResponse.cs" />
+    <Compile Include="BusinessLogic\Models\Cart.cs" />
+    <Compile Include="BusinessLogic\Models\Category.cs" />
+    <Compile Include="BusinessLogic\Models\CreditCard.cs" />
+    <Compile Include="BusinessLogic\Models\Customer.cs" />
+    <Compile Include="BusinessLogic\Models\Order.cs" />
+    <Compile Include="BusinessLogic\Models\OrderDetail.cs" />
+    <Compile Include="BusinessLogic\Models\OrderPayment.cs" />
+    <Compile Include="BusinessLogic\Models\Product.cs" />
+    <Compile Include="BusinessLogic\Models\Shipment.cs" />
+    <Compile Include="BusinessLogic\Models\Shipper.cs" />
+    <Compile Include="BusinessLogic\Models\Supplier.cs" />
     <Compile Include="Checkout\Orders.svc.cs">
       <DependentUpon>Orders.svc</DependentUpon>
     </Compile>
@@ -434,16 +460,6 @@
     <Compile Include="ViewCart.aspx.designer.cs">
       <DependentUpon>ViewCart.aspx</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Core\Core.csproj">
-      <Project>{7A5C72B3-5EF5-4E82-B9EE-4FF07966B5CF}</Project>
-      <Name>Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
-      <Project>{A1A81ED6-89FC-4B69-8522-032FD1757148}</Project>
-      <Name>Infrastructure</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />
