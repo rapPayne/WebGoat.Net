@@ -6,8 +6,8 @@ namespace WebSite.Admin
 {
     public partial class EditProduct : System.Web.UI.Page
     {
-        ProductRepository _productRepository;
-        CategoryRepository _categoryRepository;
+        ProductRepository _productRepository = new ProductRepository();
+        CategoryRepository _categoryRepository = new CategoryRepository();
         int _productId;
         Core.Product _prod;
         protected void Page_Load(object sender, EventArgs e)
@@ -16,8 +16,6 @@ namespace WebSite.Admin
             {
                 _productId = Convert.ToInt32(RouteData.Values["ProductId"]);
                 _productId = (_productId == 0) ? Convert.ToInt32(Request.QueryString["Id"]) : _productId;
-                _productRepository = new ProductRepository();
-                _categoryRepository = new CategoryRepository();
 
                 _prod = _productRepository.GetProductById(_productId);
                 if (!IsPostBack)
@@ -66,6 +64,13 @@ namespace WebSite.Admin
                 lblMessage.Text = ex.Message;
                 lblMessage.CssClass = "Error";
             }
+        }
+
+        public override void Dispose()
+        {
+            _productRepository.Dispose();
+            _categoryRepository.Dispose();
+            base.Dispose();
         }
     }
 }

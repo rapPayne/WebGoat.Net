@@ -5,21 +5,22 @@ using Core;
 
 namespace Infrastructure
 {
-    public class OrderRepository
+    public class OrderRepository : IDisposable
     {
         private NorthwindContext _context;
-        private CustomerRepository _customerRepository;
         public OrderRepository()
         {
-            _context = NorthwindContext.GetNorthwindContext();
+            _context = new NorthwindContext();
         }
         public Order GetOrderById(int OrderId)
         {
-            _customerRepository = new CustomerRepository();
-            var order = _context.Orders.Single(o => o.OrderId == OrderId);
-            if (order.CustomerId.Length > 0)
-                order.Customer = _customerRepository.GetCustomerByCustomerId(order.CustomerId);
-            return order;
+            using (var customerRepository = new CustomerRepository())
+            {
+                var order = _context.Orders.Single(o => o.OrderId == OrderId);
+                if (order.CustomerId.Length > 0)
+                    order.Customer = customerRepository.GetCustomerByCustomerId(order.CustomerId);
+                return order;
+            }
         }
         public int CreateOrder(Order Order)
         {
@@ -74,6 +75,11 @@ namespace Infrastructure
         {
             _context.Entry(Order).State = System.Data.Entity.EntityState.Modified;
             _context.SaveChanges();
+        }
+
+        public void Dispose()
+        {
+            _context.Dispose();
         }
     }
 

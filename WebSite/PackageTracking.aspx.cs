@@ -71,5 +71,13 @@ namespace WebSite
 
             Response.Redirect(Order.GetPackageTrackingUrl(_carrier, _trackingNumber));
         }
+
+        public override void Dispose()
+        {
+            _orderRepository.Dispose();
+            _customerRepository.Dispose();
+            _shipperRepository.Dispose();
+            base.Dispose();
+        }
     }
 }

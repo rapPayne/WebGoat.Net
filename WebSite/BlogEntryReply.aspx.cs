@@ -61,5 +61,11 @@ namespace WebSite
             repo.CreateBlogResponse(response);
             Response.Redirect("/Blog");
         }
+
+        public override void Dispose()
+        {
+            _blogEntryReposistory.Dispose();
+            base.Dispose();
+        }
     }
 }

@@ -72,5 +72,11 @@ namespace WebSite
 
             Response.Redirect("~/ViewCart.aspx");
         }
+
+        public override void Dispose()
+        {
+            _repository.Dispose();
+            base.Dispose();
+        }
     }
 }

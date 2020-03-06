@@ -26,5 +26,11 @@ namespace WebSite.Admin
             sb.Append("</ul></div>");
             lblOutput.Text = sb.ToString();
         }
+
+        public override void Dispose()
+        {
+            _productRepository.Dispose();
+            base.Dispose();
+        }
     }
 }

@@ -23,8 +23,10 @@ namespace WebSite.Account
             var postalCode = ((TextBox)RegisterUser.CreateUserStep.ContentTemplateContainer.FindControl("txtPostalCode")).Text;
             var country = ((TextBox)RegisterUser.CreateUserStep.ContentTemplateContainer.FindControl("txtCountry")).Text;
 
-            var repo = new CustomerRepository();
-            repo.CreateCustomer(_companyName, _contactName, address, city, region, postalCode, country);
+            using (var repo = new CustomerRepository())
+            {
+                repo.CreateCustomer(_companyName, _contactName, address, city, region, postalCode, country);
+            }
 
             FormsAuthentication.SetAuthCookie(RegisterUser.UserName, false /* createPersistentCookie */);
             string continueUrl = RegisterUser.ContinueDestinationPageUrl;

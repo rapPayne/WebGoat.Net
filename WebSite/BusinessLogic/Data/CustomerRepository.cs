@@ -4,13 +4,13 @@ using Core;
 
 namespace Infrastructure
 {
-    public class CustomerRepository
+    public class CustomerRepository : IDisposable
     {
         private NorthwindContext _context;
 
         public CustomerRepository()
         {
-            _context = NorthwindContext.GetNorthwindContext();
+            _context = new NorthwindContext();
         }
 
         public Customer GetCustomerByUsername(string Username)
@@ -76,6 +76,11 @@ namespace Infrastructure
                 customerId = customerId.Substring(0, 4) + "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"[random.Next(35)];
             }
             return customerId;
+        }
+
+        public void Dispose()
+        {
+            _context.Dispose();
         }
     }
 }

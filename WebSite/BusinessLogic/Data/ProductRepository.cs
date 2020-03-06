@@ -6,12 +6,12 @@ using Core.Interfaces;
 
 namespace Infrastructure
 {
-    public class ProductRepository : IProductRepository
+    public class ProductRepository : IProductRepository, IDisposable
     {
         private NorthwindContext _context;
         public ProductRepository()
         {
-            _context = NorthwindContext.GetNorthwindContext();
+            _context = new NorthwindContext();
         }
         public Product GetProductById(int ProductId)
         {
@@ -70,6 +70,11 @@ namespace Infrastructure
         {
             _context.Products.Add(Product);
             _context.SaveChanges();
+        }
+
+        public void Dispose()
+        {
+            _context.Dispose();
         }
     }
 }

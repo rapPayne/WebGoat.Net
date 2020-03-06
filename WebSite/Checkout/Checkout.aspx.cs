@@ -156,5 +156,13 @@ namespace WebSite.Checkout
             //Show success page
             Response.Redirect("Receipt.aspx");
         }
+
+        public override void Dispose()
+        {
+            _customerRepository.Dispose();
+            _orderRepository.Dispose();
+            _shipperRepository.Dispose();
+            base.Dispose();
+        }
     }
 }
