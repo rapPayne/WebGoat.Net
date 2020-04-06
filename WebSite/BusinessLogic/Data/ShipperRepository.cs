@@ -5,12 +5,12 @@ using Core;
 
 namespace Infrastructure
 {
-    public class ShipperRepository
+    public class ShipperRepository : IDisposable
     {
         private NorthwindContext _context;
         public ShipperRepository()
         {
-            _context = NorthwindContext.GetNorthwindContext();
+            _context = new NorthwindContext();
         }
 
         public List<Shipper> GetAllShippers()
@@ -51,6 +51,11 @@ namespace Infrastructure
             {
                 return "Could not get a tracking number";
             }
+        }
+
+        public void Dispose()
+        {
+            _context.Dispose();
         }
     }
 }

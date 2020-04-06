@@ -13,18 +13,20 @@ namespace WebSite
             Response.Cookies.Add(sessionCookie);
 
             string output = string.Empty;
-            var productRepository = new ProductRepository();
-            var top4Products = productRepository.GetTopProducts(4);
-            foreach (var product in top4Products)
+            using (var productRepository = new ProductRepository())
             {
-                var imageUrl = "images/productImages/" + product.ProductId.ToString() + ".jpg";
-                if (!File.Exists(Server.MapPath(imageUrl)))
+                var top4Products = productRepository.GetTopProducts(4);
+                foreach (var product in top4Products)
                 {
-                    imageUrl = "images/productImages/NoImage.jpg";
+                    var imageUrl = "images/productImages/" + product.ProductId.ToString() + ".jpg";
+                    if (!File.Exists(Server.MapPath(imageUrl)))
+                    {
+                        imageUrl = "images/productImages/NoImage.jpg";
+                    }
+                    output += product.ToSummaryHtml(imageUrl);
                 }
-                output += product.ToSummaryHtml(imageUrl);
+                lblProductList.Text = output;
             }
-            lblProductList.Text = output;
         }
     }
 }

@@ -48,5 +48,11 @@ namespace WebSite
             this.entriesDiv.InnerHtml = allEntries.ToString();
 
         }
+
+        public override void Dispose()
+        {
+            _repo.Dispose();
+            base.Dispose();
+        }
     }
 }

@@ -37,5 +37,11 @@ namespace WebSite.Checkout
             output.Append("</div>");
             lblOutput.Text = output.ToString();
         }
+
+        public override void Dispose()
+        {
+            _orderRepository.Dispose();
+            base.Dispose();
+        }
     }
 }

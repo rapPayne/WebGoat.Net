@@ -23,5 +23,13 @@ namespace WebSite
             gvProductList.DataSource = products;
             gvProductList.DataBind();
         }
+
+        public override void Dispose()
+        {
+            _productRepo.Dispose();
+            _categoryRepo.Dispose();
+            base.Dispose();
+        }
+
     }
 }

@@ -1,15 +1,21 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Core;
 
 namespace Infrastructure
 {
-    public class SupplierRepository
+    public class SupplierRepository : IDisposable
     {
         private NorthwindContext _context;
         public SupplierRepository()
         {
-            _context = NorthwindContext.GetNorthwindContext();
+            _context = new NorthwindContext();
+        }
+
+        public void Dispose()
+        {
+            _context.Dispose();
         }
 
         public List<Supplier> GetAllSuppliers()

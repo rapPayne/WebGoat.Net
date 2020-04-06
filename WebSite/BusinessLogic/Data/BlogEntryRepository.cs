@@ -6,12 +6,12 @@ using Core;
 
 namespace Infrastructure
 {
-    public class BlogEntryRepository
+    public class BlogEntryRepository : IDisposable
     {
         private NorthwindContext _context;
         public BlogEntryRepository()
         {
-            _context = NorthwindContext.GetNorthwindContext();
+            _context = new NorthwindContext();
         }
         public void CreateBlogEntry(BlogEntry Entry)
         {
@@ -19,6 +19,12 @@ namespace Infrastructure
             _context.BlogEntries.Add(Entry);
             _context.SaveChanges();
         }
+
+        public void Dispose()
+        {
+            _context.Dispose();
+        }
+
         public BlogEntry GetBlogEntry(int BlogEntryId)
         {
             return _context.BlogEntries.Single(b => b.Id == BlogEntryId);

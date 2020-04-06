@@ -6,18 +6,15 @@ namespace WebSite.Admin
 {
     public partial class AddProduct : System.Web.UI.Page
     {
-        ProductRepository _productRepository;
-        CategoryRepository _categoryRepository;
-        SupplierRepository _supplierRepository;
+        ProductRepository _productRepository = new ProductRepository();
+        CategoryRepository _categoryRepository = new CategoryRepository();
+        SupplierRepository _supplierRepository = new SupplierRepository();
         Core.Product _prod;
         protected void Page_Load(object sender, EventArgs e)
         {
             _prod = new Core.Product();
             try
             {
-                _productRepository = new ProductRepository();
-                _categoryRepository = new CategoryRepository();
-                _supplierRepository = new SupplierRepository();
                 if (!IsPostBack)
                 {
                     _categoryRepository.GetAllCategories().ForEach(c => ddlCategoryId.Items.Add(new ListItem(c.CategoryName, c.CategoryId.ToString())));
@@ -52,6 +49,14 @@ namespace WebSite.Admin
                 lblMessage.Text = ex.Message;
                 lblMessage.CssClass = "Error";
             }
+        }
+
+        public override void Dispose()
+        {
+            _productRepository.Dispose();
+            _categoryRepository.Dispose();
+            _supplierRepository.Dispose();
+            base.Dispose();
         }
     }
 }

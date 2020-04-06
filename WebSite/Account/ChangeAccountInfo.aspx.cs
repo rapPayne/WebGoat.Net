@@ -50,5 +50,11 @@ namespace WebSite.Account
                 lblFeedback.Text = "An error has occurred in saving.  Please try again.";
             }
         }
+
+        public override void Dispose()
+        {
+            _customerRepository.Dispose();
+            base.Dispose();
+        }
     }
 }

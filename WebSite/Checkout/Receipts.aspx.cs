@@ -33,5 +33,12 @@ namespace WebSite.Checkout
             output.Append("</table>");
             lblReceipts.Text = output.ToString();
         }
+
+        public override void Dispose()
+        {
+            _orderRepository.Dispose();
+            _customerRepository.Dispose();
+            base.Dispose();
+        }
     }
 }

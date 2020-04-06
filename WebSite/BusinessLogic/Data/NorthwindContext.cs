@@ -6,18 +6,10 @@ namespace Infrastructure
     public class NorthwindContext : DbContext
     {
         private static string _connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Northwnd.mdf;Integrated Security=True";
-        private NorthwindContext()
+        public NorthwindContext()
             : base(_connString)
         {
         }
-        #region Singleton pattern
-        private static NorthwindContext _northwindContext;
-        public static NorthwindContext GetNorthwindContext()
-        {
-            _northwindContext = (_northwindContext ?? new NorthwindContext());
-            return _northwindContext;
-        }
-        #endregion
 
         public DbSet<BlogEntry> BlogEntries { get; set; }
         public DbSet<BlogResponse> BlogResponses { get; set; }
