@@ -111,3 +111,6 @@ UpgradeLog*.XML
 /UpgradeLog2.htm
 /UpgradeLog.htm
 /.vs/config
+
+# SonarQube
+.sonarqube/
